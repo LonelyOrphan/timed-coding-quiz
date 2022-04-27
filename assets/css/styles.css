@@ -19,3 +19,11 @@ body {
 main {
     flex-grow: 2;
 }
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
