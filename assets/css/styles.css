@@ -1,6 +1,6 @@
 :root {
     --codegreen: #2fca5a;
-    --darkgrey: #303030;
+    --darkgrey: #1f1f1f;
 }
 
 * {
@@ -21,6 +21,8 @@ body {
     font-family: 'Courier Prime', monospace;
     background-color: var(--darkgrey);
 }
+
+/* Header Section */
 
 .header {
     background-color: black;
@@ -60,6 +62,27 @@ body {
     color: var(--codegreen);
 }
 
+/* Main Section */
+
 main {
     flex-grow: 2;
+}
+
+/* Footer Section*/
+
+.footer {
+    background-color: black;
+    font-size: 1.4rem;
+}
+
+.contact-container {
+    display: flex;
+}
+
+.contact-link {
+
+}
+
+.contact-link:hover {
+
 }
