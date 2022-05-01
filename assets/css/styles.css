@@ -6,6 +6,7 @@
 
 * {
     box-sizing: border-box;
+    font-family: 'Courier Prime', monospace;
 }
 
 html {
@@ -19,7 +20,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: 'Courier Prime', monospace;
     background-color: var(--darkgrey);
 }
 
@@ -85,15 +85,30 @@ h1 {
     font-size: 4.8rem;
     text-transform: uppercase;
     margin: 0;
+    font-weight: 100;
 }
 
 h2 {
     font-size: 2.4rem;
     margin: 0;
+    font-weight: 100;
+}
+
+.btn-container {
+    padding: 2rem;
 }
 
 .btn {
-    
+    padding: 2rem;
+    background-color: transparent;
+    border-radius: 1rem;
+    font-size: 2.4rem;
+    color: var(--codegreen);
+}
+
+.btn:hover {
+    box-shadow: 0 0 3rem 0.3rem var(--codegreen);
+    cursor: pointer;
 }
 
 /* Footer Section*/
