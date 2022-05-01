@@ -1,5 +1,6 @@
 :root {
     --codegreen: #2fca5a;
+    --mediumgreen: #165a29;
     --darkgreen: #0f3e1c;
     --darkgrey: #1f1f1f;
 }
@@ -121,6 +122,26 @@ h2 {
     .btn {
         font-size: 1.8rem;
     }
+}
+
+/* Questions Section */
+ul {
+    list-style: none;
+}
+
+li {
+    background: var(--darkgreen);
+    border: 1rem solid var(--darkgrey);
+    padding: 1rem;
+}
+
+li:hover {
+    background-color: var(--mediumgreen);
+    cursor: pointer;
+}
+
+.question-container {
+    /* line-height: 7rem; */
 }
 
 /* Footer Section*/
