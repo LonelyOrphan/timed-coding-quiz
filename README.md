@@ -1,10 +1,10 @@
 # timed-coding-quiz
-A timed coding quiz with multiple choice answers
+A timed coding quiz with multiple choice answers.
+High scores are stored on the high scores page.
 
-- Quiz should be timed??
-- Quiz should have multiple choice questions??
-- What is dynamic in JS
-- Stores my high scores??
+Screenshot: ./assets/images/screenshot.jpg
+
+Live app: https://lonelyorphan.github.io/timed-coding-quiz/
 
 User Journey
 
@@ -22,19 +22,3 @@ User Journey
   OR
   - When remaining time reaches 0
 - When you answer all questions stop the timer and record that as your score and render form
-
-Form
-- field for initials or full name
-- a message stating your score
-- submit the form
-
-On form submission
-- store your score in local storage
-
-
-High Scores Page
-
-- When page loads read all the scores from local storage
-- Present the scores as a list with initials or full name and the score
-- Also render 2 buttons: Go Back which takes you back to index.html; Clear highscores which clears your local storage
-- When you load the page with no highscores render a message stating "No scores"
