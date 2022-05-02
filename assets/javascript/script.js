@@ -7,6 +7,9 @@ const startupScreen = document.getElementById("startup-screen");
 // Target main element
 const mainElement = document.getElementById("main");
 
+// Target question section
+const questionElement = document.getElementById("question-section");
+
 // Remove startup screen
 const removeStartupScreen = function() {
     
@@ -45,8 +48,9 @@ const renderQuestion = function() {
 
 // Declare event handler function for start button click
 const handleStartButtonClick = function() {
-    console.log(startButton);
-    // 
+    startupScreen.style.display = "none";
+    questionElement.style.display = "block";
+
     removeStartupScreen();
     renderQuestion();
 }
