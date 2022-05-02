@@ -9,7 +9,7 @@ const mainElement = document.getElementById("main");
 
 // Remove startup screen
 const removeStartupScreen = function() {
-
+    
 }
 
 // Render Question
@@ -21,12 +21,26 @@ const renderQuestion = function() {
 
     // Create question
     const h2 = document.createElement("h2");
-    h2.textContent = "What is JavaScript?"
+    h2.textContent = "What is JavaScript?";
 
     // Create question answers
     const ul = document.createElement("ul");
     ul.setAttribute("class", "answers-list");
-    const div = document.createElement("div");
+    
+
+    // Loop over li items to create
+    const li1 = document.createElement("li");
+    li1.setAttribute("class", "list-item");
+    li1.textContent = "Indonesian penmanship";
+
+    const li2 = document.createElement("li");
+    li1.setAttribute("class", "list-item");
+    li2.textContent = "Indonesian penmanship";
+
+    const li3 = document.createElement("li");
+    li1.setAttribute("class", "list-item");
+    li3.textContent = "Indonesian penmanship";
+
 }
 
 // Declare event handler function for start button click
