@@ -150,6 +150,14 @@ li:hover {
   display: none;
 }
 
+.question-container-2 {
+  display: none;
+}
+
+.question-container-3 {
+  display: none;
+}
+
 /* Footer Section*/
 
 .footer {
