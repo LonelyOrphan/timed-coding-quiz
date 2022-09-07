@@ -15,11 +15,22 @@ const wrongAnswer = () => {
   count -= 10;
 };
 
-// Wrong answer selected
+// Hide question 1, show question 2
+const displayQ2 = () => {
+  const questionTwo = document.getElementById("question-section-2");
+  questionOne.style.display = "none";
+  questionTwo.style.display = "block";
+};
+
+// User selects wrong answer
 const q1a1 = document.getElementById("q1-a1");
 const q1a2 = document.getElementById("q1-a2");
 q1a1.addEventListener("click", wrongAnswer);
 q1a2.addEventListener("click", wrongAnswer);
+
+// User selects correct answer - Q1
+const q1a3 = document.getElementById("q1-a3");
+q1a3.addEventListener("click", displayQ2);
 
 // Target Start button
 const startButton = document.getElementById("start-btn");
@@ -33,7 +44,7 @@ const questionOne = document.getElementById("question-section-1");
 // Remove startup screen
 const removeStartupScreen = function () {};
 
-// Declare event handler function for start button click
+// Start Button Click - Display Question 1 and Timer
 const handleStartButtonClick = function () {
   setInterval(countdown, 1000);
   startupScreen.style.display = "none";
