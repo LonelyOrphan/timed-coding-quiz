@@ -35,7 +35,7 @@ const wrongAnswer = () => {
   count -= 10;
 };
 
-// Start Button Click - Display Question 1 and Timer
+// Display question 1 and Timer
 const startQuiz = function () {
   setInterval(countdown, 1000);
   startupScreen.style.display = "none";
@@ -55,6 +55,9 @@ const displayQ3 = () => {
   questionThreeSection.style.display = "block";
 };
 
+// User clicks start button
+startButton.addEventListener("click", startQuiz);
+
 // User selects wrong answer
 q1a1.addEventListener("click", wrongAnswer);
 q1a2.addEventListener("click", wrongAnswer);
@@ -70,34 +73,3 @@ q1a3.addEventListener("click", displayQ2);
 // User selects correct answer - Q2
 const q2a2 = document.getElementById("q2-a2");
 q2a2.addEventListener("click", displayQ3);
-
-// Add event handler to start button
-startButton.addEventListener("click", startQuiz);
-
-// Render Question
-// const renderQuestion = function () {
-//   // Create question container section
-//   const section = document.createElement("section");
-//   section.setAttribute("class", "question-container");
-
-//   // Create question
-//   const h2 = document.createElement("h2");
-//   h2.textContent = "What is JavaScript?";
-
-//   // Create question answers
-//   const ul = document.createElement("ul");
-//   ul.setAttribute("class", "answers-list");
-
-//   // Loop over li items to create
-//   const li1 = document.createElement("li");
-//   li1.setAttribute("class", "list-item");
-//   li1.textContent = "Indonesian penmanship";
-
-//   const li2 = document.createElement("li");
-//   li1.setAttribute("class", "list-item");
-//   li2.textContent = "Indonesian penmanship";
-
-//   const li3 = document.createElement("li");
-//   li1.setAttribute("class", "list-item");
-//   li3.textContent = "Indonesian penmanship";
-// };
