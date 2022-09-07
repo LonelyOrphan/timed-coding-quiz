@@ -10,6 +10,17 @@ const countdown = () => {
   timerDisplay.innerHTML = count;
 };
 
+// Remove 10 seconds from timer if wrong answer is selected
+const wrongAnswer = () => {
+  count -= 10;
+};
+
+// Wrong answer selected
+const q1a1 = document.getElementById("q1-a1");
+const q1a2 = document.getElementById("q1-a2");
+q1a1.addEventListener("click", wrongAnswer);
+q1a2.addEventListener("click", wrongAnswer);
+
 // Target Start button
 const startButton = document.getElementById("start-btn");
 
