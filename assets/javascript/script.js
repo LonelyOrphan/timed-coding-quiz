@@ -1,6 +1,13 @@
 let count = 31;
 
+// Target startup section
+const startupScreen = document.getElementById("startup-screen");
+
+// Target Start button
+const startButton = document.getElementById("start-btn");
+
 // Target question sections
+const questionOneSection = document.getElementById("question-section-1");
 const questionTwoSection = document.getElementById("question-section-2");
 const questionThreeSection = document.getElementById("question-section-3");
 
@@ -28,20 +35,27 @@ const wrongAnswer = () => {
   count -= 10;
 };
 
-// Hide question 1, show question 2
-const displayQ2 = () => {
-  questionOne.style.display = "none";
-  questionTwoSection.style.display = "block";
+// Start Button Click - Display Question 1 and Timer
+const startQuiz = function () {
+  setInterval(countdown, 1000);
+  startupScreen.style.display = "none";
+  questionOneSection.style.display = "block";
+  timerDisplay.style.display = "block";
 };
 
 // Hide question 1, show question 2
+const displayQ2 = () => {
+  questionOneSection.style.display = "none";
+  questionTwoSection.style.display = "block";
+};
+
+// Hide question 2, show question 3
 const displayQ3 = () => {
   questionTwoSection.style.display = "none";
   questionThreeSection.style.display = "block";
 };
 
 // User selects wrong answer
-
 q1a1.addEventListener("click", wrongAnswer);
 q1a2.addEventListener("click", wrongAnswer);
 q2a1.addEventListener("click", wrongAnswer);
@@ -57,25 +71,8 @@ q1a3.addEventListener("click", displayQ2);
 const q2a2 = document.getElementById("q2-a2");
 q2a2.addEventListener("click", displayQ3);
 
-// Target Start button
-const startButton = document.getElementById("start-btn");
-
-// Target startup section
-const startupScreen = document.getElementById("startup-screen");
-
-// Target question section
-const questionOne = document.getElementById("question-section-1");
-
-// Start Button Click - Display Question 1 and Timer
-const handleStartButtonClick = function () {
-  setInterval(countdown, 1000);
-  startupScreen.style.display = "none";
-  questionOne.style.display = "block";
-  timerDisplay.style.display = "block";
-};
-
 // Add event handler to start button
-startButton.addEventListener("click", handleStartButtonClick);
+startButton.addEventListener("click", startQuiz);
 
 // Render Question
 // const renderQuestion = function () {
