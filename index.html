@@ -1,61 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="./assets/css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Timed Coding Quiz</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <nav class="nav-container">
-            <a href="./index.html" class="nav-link-img">
-                <img src="./assets/images/code.jpg" class="nav-img" alt="coding icon">
-            </a>
-            <a href="./high-scores.html" class="nav-link">High Scores</a>
-        </nav>
+      <nav class="nav-container">
+        <a href="./index.html" class="nav-link-img">
+          <img
+            src="./assets/images/code.jpg"
+            class="nav-img"
+            alt="coding icon"
+          />
+        </a>
+        <a href="./high-scores.html" class="nav-link">High Scores</a>
+      </nav>
     </header>
-     <main id="main">
-
-        <section id="startup-screen">
-            <h1>Timed Coding Quiz</h1>
-            <h2>Are you ready to test your coding knowledge?</h2>
-            <div class="btn-container">
-                <button class="btn" id="start-btn">Start the Quiz</button>
-            </div>
-    </section>
-    
-
-          <!-- question section dynamically rendered via JS -->
-      <section class="question-container" id="question-section">
-        <h2 class="question-section-title">
-          What is JavaScript?
-        </h2>
-        <ul class="answers-list">
-          <li class="list-item">Indonesian penmanship</li>
-          <li class="list-item">A large mammal</li>
-          <li class="list-item">A programming language used for the Internet</li>
-        </ul>
+    <main id="main">
+      <section id="startup-screen">
+        <h1>Timed Coding Quiz</h1>
+        <h2>Are you ready to test your coding knowledge?</h2>
+        <div class="btn-container">
+          <button class="btn" id="start-btn">Start the Quiz</button>
+        </div>
       </section>
 
+      <!-- Timer section -->
+      <h2 class="timer" id="timer"></h2>
+
+      <!-- question section dynamically rendered via JS -->
+      <section class="question-container-1" id="question-section-1">
+        <h2 class="question-section-title">What is JavaScript?</h2>
+        <ul class="answers-list">
+          <li class="list-item" id="q1-a1">Indonesian penmanship</li>
+          <li class="list-item" id="q1-a2">A large mammal</li>
+          <li class="list-item" id="q1-a3">
+            A programming language used for the Internet
+          </li>
+        </ul>
+      </section>
     </main>
 
     <footer class="footer">
-        <h4>
-            © Natasha Beddow
-        </h4>
-        <div class="contact-container">
-            <a class="contact-link" href="https://github.com/LonelyOrphan">Visit my Github</a>
-            <a class="contact-link" href="mailto:beddow90@gmail.com">Email me</a>
-        </div>
+      <h4>© Natasha Beddow</h4>
+      <div class="contact-container">
+        <a class="contact-link" href="https://github.com/LonelyOrphan"
+          >Visit my Github</a
+        >
+        <a class="contact-link" href="mailto:beddow90@gmail.com">Email me</a>
+      </div>
     </footer>
-    
-
 
     <script src="./assets/javascript/script.js"></script>
-</body>
+  </body>
 </html>
