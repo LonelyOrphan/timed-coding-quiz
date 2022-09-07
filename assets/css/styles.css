@@ -158,6 +158,12 @@ li:hover {
   display: none;
 }
 
+/* High Scores Section */
+
+.save-high-score {
+  display: none;
+}
+
 /* Footer Section*/
 
 .footer {

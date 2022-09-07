@@ -1,4 +1,5 @@
 let count = 31;
+let finalScore;
 
 // Target startup section
 const startupScreen = document.getElementById("startup-screen");
@@ -21,6 +22,15 @@ const q3a3 = document.getElementById("q3-a3");
 
 // Target timer display
 const timerDisplay = document.getElementById("timer");
+
+// Target save score section
+const saveScoreSection = document.getElementById("saveHighScore");
+
+// Target initials form
+const initialsForm = document.getElementById("initialsForm");
+
+// Target initials input window
+const initialsText = document.getElementById("initials");
 
 // Declare function to run and display countdown
 const countdown = () => {
@@ -55,6 +65,15 @@ const displayQ3 = () => {
   questionThreeSection.style.display = "block";
 };
 
+// Hide question 3, show scores
+const saveScore = () => {
+  finalScore = count;
+  console.log(finalScore);
+  timerDisplay.style.display = "none";
+  questionThreeSection.style.display = "none";
+  saveScoreSection.style.display = "block";
+};
+
 // User clicks start button
 startButton.addEventListener("click", startQuiz);
 
@@ -73,3 +92,18 @@ q1a3.addEventListener("click", displayQ2);
 // User selects correct answer - Q2
 const q2a2 = document.getElementById("q2-a2");
 q2a2.addEventListener("click", displayQ3);
+
+// User selects correct answer - Q2
+const q3a1 = document.getElementById("q3-a1");
+q3a1.addEventListener("click", saveScore);
+
+// Submit initials and high score
+const submitScore = (e) => {
+  e.preventDefault();
+  const initials = initialsText.value;
+  localStorage.setItem(initials, finalScore);
+  window.location.replace("high-scores.html");
+};
+
+// User submits initials
+initialsForm.addEventListener("submit", submitScore);
