@@ -16,11 +16,8 @@ const startButton = document.getElementById("start-btn");
 // Target startup section
 const startupScreen = document.getElementById("startup-screen");
 
-// Target main element
-const mainElement = document.getElementById("main");
-
 // Target question section
-const questionElement = document.getElementById("question-section-1");
+const questionOne = document.getElementById("question-section-1");
 
 // Remove startup screen
 const removeStartupScreen = function () {};
@@ -29,7 +26,7 @@ const removeStartupScreen = function () {};
 const handleStartButtonClick = function () {
   setInterval(countdown, 1000);
   startupScreen.style.display = "none";
-  questionElement.style.display = "block";
+  questionOne.style.display = "block";
   timerDisplay.style.display = "block";
 
   removeStartupScreen();
