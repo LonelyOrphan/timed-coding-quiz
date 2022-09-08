@@ -32,14 +32,6 @@ const initialsForm = document.getElementById("initialsForm");
 // Target initials input window
 const initialsText = document.getElementById("initials");
 
-// Declare function to run and display countdown
-const countdown = () => {
-  if (count > 0) {
-    count--;
-  }
-  timerDisplay.innerHTML = count;
-};
-
 // Remove 10 seconds from timer if wrong answer is selected
 const wrongAnswer = () => {
   count -= 10;
@@ -72,6 +64,21 @@ const saveScore = () => {
   timerDisplay.style.display = "none";
   questionThreeSection.style.display = "none";
   saveScoreSection.style.display = "block";
+};
+
+// Declare function to run and display countdown
+const countdown = () => {
+  if (count > 0) {
+    count--;
+  }
+  timerDisplay.innerHTML = count;
+  // End game if timer reaches 0
+  if (count <= 0) {
+    timerDisplay.style.display = "none";
+    questionOneSection.style.display = "none";
+    questionTwoSection.style.display = "none";
+    saveScore();
+  }
 };
 
 // User clicks start button

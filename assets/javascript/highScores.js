@@ -2,8 +2,17 @@
 const highScores = document.getElementById("highScoreValues");
 
 // Display high score values from local storage
-for (let key in localStorage) {
-  console.log(key);
-  console.log(localStorage.getItem(key));
+let sortable = [];
+for (let key in Object.entries(localStorage)) {
+  sortable.push([key, localStorage[key]]);
 }
-highScores.innerHTML = localStorage;
+sortable.sort(function (a, b) {
+  return a[1] - b[1];
+});
+
+console.log(sortable);
+
+for (let [key, value] of Object.entries(localStorage)) {
+  console.log(`${key}: ${value}`);
+  highScores.innerHTML += `<li>${key}: ${value}</li>`;
+}
